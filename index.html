@@ -17,13 +17,13 @@
         <object type="image/svg+xml" data="5.svg" class="svg" id="svg5_1"></object>
         <div class="main">
             <div id="text-block">
-                <text class="l1">Привет!</text>
+                <text class="l1">Привет?!</text>
                 <p>
                     <text class="l2">Я – Шлем чтения мыслей, приятно познакомиться!</text>
                 <p>
                     <text class="l3">Иногда люди заблуждаются, что знают, о чем думает другой, но это не так.</text><br>
                     <text class="l3">А я умею! честное слово! Ой... то есть честный скрежет моей программы!</text><br>
-                <p>
+                <p>S
                     <text class="l3">Ну что, погнали? </text>
             </div>
             <div class="button" onclick="next(1)">
@@ -43,7 +43,7 @@
         <object type="image/svg+xml" data="3.svg" class="svg" id="svg3_3"></object>
         <object type="image/svg+xml" data="4.svg" class="svg" id="svg4_3"></object>
         <object type="image/svg+xml" data="5.svg" class="svg" id="svg5_3"></object>
-        <div class="main3">
+        <div class="main">
             <img src="1.jpg" id="random_image">
             <div class="button" onclick="next(0)">
                 <text class="l3">ЗАБЫТЬ УВИДЕННОЕ</text>
@@ -86,7 +86,7 @@
         }
         if (i == 1) {
             document.getElementById('random_text').innerText = array[Math.floor(Math.random() * array.length)];
-            setTimeout(() => next(2), 1000*8);
+            setTimeout(() => next(2), 1000*7);
             document.getElementById('random_image').src = images[Math.floor(Math.random() * images.length)];
             video.currentTime = 0;
         }

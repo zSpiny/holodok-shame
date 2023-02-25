@@ -8,21 +8,24 @@ body {
   justify-content: center;
   overflow: hidden; 
   margin: auto;
-  width: 75%;
-  min-width: 75%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 div {
-  border: 1px dashed #32a1ce;
+  border: 0px dashed #32a1ce;
 }
 .svg {
   margin: auto;
   position: absolute;
   animation-name: rotfor;
+  /* -webkit-animation: rotfor; */
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: -1;
   object-fit: cover;
+  overflow: hidden; 
   display: block;
   opacity: 0.45;
 }
@@ -32,6 +35,7 @@ div {
   animation-name: rotback_1;
   width: 45%;
   height: 45%;
+  opacity: 0.75;
 }
 #svg2_1 {
   animation-duration: 19s;
@@ -39,6 +43,7 @@ div {
   animation-name: rotfor_1;
   width: 70%;
   height: 70%;
+  opacity: 0.6;
 }
 #svg3_1 {
   animation-duration: 16s;
@@ -46,6 +51,7 @@ div {
   animation-name: rotfor_1;
   width: 100%;
   height: 100%;
+  opacity: 0.4;
 }
 #svg4_1 {
   animation-duration: 19s;
@@ -53,6 +59,7 @@ div {
   animation-name: rotback_1;
   width: 140%;
   height: 140%;
+  opacity: 0.3;
 }
 #svg5_1 {
   animation-duration: 20s;
@@ -60,6 +67,7 @@ div {
   animation-name: rotfor_1;
   width: 180%;
   height: 180%;
+  opacity: 0.2;
 }
 
 
@@ -68,29 +76,34 @@ div {
   animation-name: rotback_2;
   width: 45%;
   height: 45%;
+  opacity: 0.75;
 }
 #svg2_3 {
   animation-duration: 19s;
   animation-name: rotback_2;
   width: 70%;
   height: 70%;
+  opacity: 0.6;
 }
 #svg3_3 {
   animation-name: rotfor_2;
   animation-duration: 18s;
   width: 100%;
   height: 100%;
+  opacity: 0.4;
 }
 #svg4_3 {
   animation-name: rotfor_2;
   animation-duration: 20s;
   width: 140%;
   height: 140%;
+  opacity: 0.3;
 }
 #svg5_3 {
   animation-name: rotback_2;
   width: 180%;
   height: 180%;
+  opacity: 0.2;
 }
 
 @keyframes rotfor_1 {
@@ -162,17 +175,18 @@ div {
 }
 
 div.main {
+  display: inherit;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: auto;
-  margin-top: 20%;
-  top: 50px;
+  flex-direction: column;
 }
 
 div.main3 {
+  display: inherit;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin: auto;
   margin-top: 10%;
   display:block;
@@ -256,17 +270,23 @@ text.l3 {
   display: none;
   align-items: center;
   justify-content: center;
-
+  /* height: 100%;
+  width: 100%;
+  min-width: 100%; */
+  /* margin-top: 25%;
+  margin-bottom: 25%; */
+}
+#screen2 {
+  position: relative;
+  object-fit: cover;
+  /* margin-top: -55%; */
 }
 #screen3 {
   min-width: 75%;
-  margin-top: auto;
 }
 #brain {
   width: 100vw;
   height: 100vh;
-  /* width: 100px; */
-  /* height: 100px; */
   object-fit: cover;
   position: fixed;
   left: 0;
