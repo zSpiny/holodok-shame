@@ -1,3 +1,6 @@
+html {
+  overflow: hidden
+}
 body {
   background: #000;
   display: flex;
@@ -6,7 +9,7 @@ body {
   overflow: hidden; 
 }
 div {
-  border: 0px dashed #32a1ce;
+  border: 1px dashed #32a1ce;
 }
 .svg {
   margin: auto;
@@ -159,7 +162,8 @@ div.main {
   align-items: center;
   text-align: center;
   justify-content: center;
-  min-width: 75%;
+  /* width: 75%;
+  min-width: 75%; */
   margin: auto;
   margin-top: 20%;
   top: 50px;
@@ -168,7 +172,7 @@ div.main {
 div.main3 {
   align-items: center;
   justify-content: center;
-  /* width: 75%; */
+
   margin: auto;
   margin-top: 10%;
   display:block;
