@@ -10,11 +10,11 @@
 
 <body onload="next(0)">
     <div class="screen" id="screen1">
-        <object type="image/svg+xml" data="1.svg" class="svg"></object>
-        <object type="image/svg+xml" data="2.svg" class="svg"></object>
-        <object type="image/svg+xml" data="3.svg" class="svg"></object>
-        <object type="image/svg+xml" data="4.svg" class="svg"></object>
-        <object type="image/svg+xml" data="5.svg" class="svg"></object>
+        <object type="image/svg+xml" data="1.svg" class="svg" id="svg1_1"></object>
+        <object type="image/svg+xml" data="2.svg" class="svg" id="svg2_1"></object>
+        <object type="image/svg+xml" data="3.svg" class="svg" id="svg3_1"></object>
+        <object type="image/svg+xml" data="4.svg" class="svg" id="svg4_1"></object>
+        <object type="image/svg+xml" data="5.svg" class="svg" id="svg5_1"></object>
         <div class="main">
             <div id="text-block">
                 <text class="l1">Привет!</text>
@@ -38,11 +38,11 @@
         <text class="l2" style="margin-top: 1em;" id="random_text">lol kek cheburek</text>
     </div>
     <div class="screen" id="screen3">
-        <object type="image/svg+xml" data="1.svg" class="svg"></object>
-        <object type="image/svg+xml" data="2.svg" class="svg"></object>
-        <object type="image/svg+xml" data="3.svg" class="svg"></object>
-        <object type="image/svg+xml" data="4.svg" class="svg"></object>
-        <object type="image/svg+xml" data="5.svg" class="svg"></object>
+        <object type="image/svg+xml" data="1.svg" class="svg" id="svg1_3"></object>
+        <object type="image/svg+xml" data="2.svg" class="svg" id="svg2_3"></object>
+        <object type="image/svg+xml" data="3.svg" class="svg" id="svg3_3"></object>
+        <object type="image/svg+xml" data="4.svg" class="svg" id="svg4_3"></object>
+        <object type="image/svg+xml" data="5.svg" class="svg" id="svg5_3"></object>
         <div class="main3">
             <img src="1.jpg" id="random_image">
             <div class="button" onclick="next(0)">
@@ -53,14 +53,14 @@
 </body>
 <script type="application/javascript">
     const array = [
-        'Читаю мысли… Ага.. А ты чё? А она чё?...',
-        'Настраиваю контакт с твоим домом.. О, нет, он в скорпионе!',
-        'Фух, чуть не утонул в твоих фантазиях! Там так сладко',
-        'Знакомлюсь с твоими тараканами. Один, два, три, …., семьдесят восемь',
-        'Нашел логику в нейронных связях… А, нет, показалось',
-        'Завис в височной доле… прикольно тут',
-        'Загружаем апельсиновые лобные дольки',
-        'Строю карту чертог разума...'
+        'Читаю мысли… Ага.. А ты чё? А она чё? . . .',
+        'Настраиваю контакт с твоим домом.. О, нет, он в скорпионе! . . .',
+        'Фух, чуть не утонул в твоих фантазиях! Там так сладко ^__^ . . .',
+        'Знакомлюсь с твоими тараканами. Один, два, три . . . семьдесят восемь',
+        'Нашел логику в нейронных связях… А, нет, показалось . . .',
+        'Завис в височной доле… прикольно тут . . .',
+        'Загружаем апельсиновые лобные дольки . . .',
+        'Строю карту чертог разума . . .'
     ]
     const images = [
         '1.jpg',
@@ -82,7 +82,7 @@
         }
         if (i == 1) {
             document.getElementById('random_text').innerText = array[Math.floor(Math.random() * array.length)];
-            setTimeout(() => next(2), 1000*5);
+            setTimeout(() => next(2), 1000*8);
             document.getElementById('random_image').src = images[Math.floor(Math.random() * images.length)];
             video.currentTime = 0;
         }

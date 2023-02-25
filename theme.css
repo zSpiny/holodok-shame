@@ -6,20 +6,88 @@ body {
   overflow: hidden; 
 }
 div {
-  border: 1px dashed #32a1ce;
+  border: 0px dashed #32a1ce;
 }
 .svg {
   margin: auto;
   position: absolute;
-  size: 100%;
-  animation-name: ckw;
+  animation-name: rotfor;
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: -1;
   object-fit: cover;
+  display: block;
+  opacity: 0.45;
 }
-@keyframes ckw {
+#svg1_1 {
+  animation-duration: 22s;
+  margin-top: 25%;
+  animation-name: rotback_1;
+  width: 45%;
+  height: 45%;
+}
+#svg2_1 {
+  animation-duration: 19s;
+  margin-top: 25%;
+  animation-name: rotfor_1;
+  width: 70%;
+  height: 70%;
+}
+#svg3_1 {
+  animation-duration: 16s;
+  margin-top: 25%;
+  animation-name: rotfor_1;
+  width: 100%;
+  height: 100%;
+}
+#svg4_1 {
+  animation-duration: 19s;
+  margin-top: 25%;
+  animation-name: rotback_1;
+  width: 140%;
+  height: 140%;
+}
+#svg5_1 {
+  animation-duration: 20s;
+  margin-top: 25%;
+  animation-name: rotfor_1;
+  width: 180%;
+  height: 180%;
+}
+
+
+#svg1_3 {
+  animation-duration: 21s;
+  animation-name: rotback_2;
+  width: 45%;
+  height: 45%;
+}
+#svg2_3 {
+  animation-duration: 19s;
+  animation-name: rotback_2;
+  width: 70%;
+  height: 70%;
+}
+#svg3_3 {
+  animation-name: rotfor_2;
+  animation-duration: 18s;
+  width: 100%;
+  height: 100%;
+}
+#svg4_3 {
+  animation-name: rotfor_2;
+  animation-duration: 20s;
+  width: 140%;
+  height: 140%;
+}
+#svg5_3 {
+  animation-name: rotback_2;
+  width: 180%;
+  height: 180%;
+}
+
+@keyframes rotfor_1 {
   0% {
     transform: rotate(0deg) scale(1);
   }
@@ -28,6 +96,40 @@ div {
   }
   100% {
     transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes rotback_1 {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-180deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes rotfor_2 {
+  0% {
+    transform: rotate(0deg) scale(0.35);
+  }
+  50% {
+    transform: rotate(180deg) scale(2);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.35);
+  }
+}
+@keyframes rotback_2 {
+  0% {
+    transform: rotate(0deg) scale(0.35);
+  }
+  50% {
+    transform: rotate(-180deg) scale(2);
+  }
+  100% {
+    transform: rotate(-360deg) scale(0.35);
   }
 }
 #random_text {
