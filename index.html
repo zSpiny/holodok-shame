@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOLODOR</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+
+<body onload="next(0)">
+    <div class="screen" id="screen1">
+        <object type="image/svg+xml" data="1.svg" class="svg"></object>
+        <object type="image/svg+xml" data="2.svg" class="svg"></object>
+        <object type="image/svg+xml" data="3.svg" class="svg"></object>
+        <object type="image/svg+xml" data="4.svg" class="svg"></object>
+        <object type="image/svg+xml" data="5.svg" class="svg"></object>
+        <div class="main">
+            <div id="text-block">
+                <text class="l1">Привет!</text>
+                <p>
+                    <text class="l2">Я – Шлем чтения мыслей, приятно познакомиться!</text>
+                <p>
+                    <text class="l3">Иногда люди заблуждаются, что знают, о чем думает другой, но это не так.</text><br>
+                    <text class="l3">А я умею! честное слово! Ой... то есть честный скрежет моей программы!</text><br>
+                <p>
+                    <text class="l3">Ну что, погнали? </text>
+            </div>
+            <div class="button" onclick="next(1)">
+                <text class="l3">РАСКРЫТЬ ВСЕ ТАЙНЫ</text>
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="screen2">
+        <video autoplay muted loop id="brain">
+            <source src="brain1.mp4" type="video/mp4">
+        </video>
+        <text class="l2" style="margin-top: 1em;" id="random_text">lol kek cheburek</text>
+    </div>
+    <div class="screen" id="screen3">
+        <object type="image/svg+xml" data="1.svg" class="svg"></object>
+        <object type="image/svg+xml" data="2.svg" class="svg"></object>
+        <object type="image/svg+xml" data="3.svg" class="svg"></object>
+        <object type="image/svg+xml" data="4.svg" class="svg"></object>
+        <object type="image/svg+xml" data="5.svg" class="svg"></object>
+        <div class="main3">
+            <img src="1.jpg" id="random_image">
+            <div class="button" onclick="next(0)">
+                <text class="l3">ЗАБЫТЬ УВИДЕННОЕ</text>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="application/javascript">
+    const array = [
+        'Читаю мысли… Ага.. А ты чё? А она чё?...',
+        'Настраиваю контакт с твоим домом.. О, нет, он в скорпионе!',
+        'Фух, чуть не утонул в твоих фантазиях! Там так сладко',
+        'Знакомлюсь с твоими тараканами. Один, два, три, …., семьдесят восемь',
+        'Нашел логику в нейронных связях… А, нет, показалось',
+        'Завис в височной доле… прикольно тут',
+        'Загружаем апельсиновые лобные дольки',
+        'Строю карту чертог разума...'
+    ]
+    const images = [
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        '6.jpg',
+        '7.jpg',
+        '8.png',
+    ]
+    function next(i) {
+        if (i !== 0) {
+            document.getElementById(`screen${i}`).style.display = "none";
+        } else {
+            document.getElementById("screen3").style.display = "none";
+        }
+        if (i == 1) {
+            document.getElementById('random_text').innerText = array[Math.floor(Math.random() * array.length)];
+            setTimeout(() => next(2), 1000*5);
+            document.getElementById('random_image').src = images[Math.floor(Math.random() * images.length)];
+        }
+        document.getElementById(`screen${i + 1}`).style.display = "flex";
+    }
+</script>
+
+</html>
